@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Material Design Lite -->
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+  <!-- Material Design icon font -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script  type="text/javascript" src="d3.min.js"></script>
+</head>
+<style>
+
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+.container{
+  max-width:1200px;
+}
+body{
+  background-color:#efeeee;
+}
+.mdl-layout__header.secodhedaer{
+  background-color: #efeeee; 
+  min-height: 30px;
+}
+.mdl-navigation__link.secondcolor{
+  color:black;
+  padding:0 5px
+}
+.mdl-navigation__link.secondcolor1{
+  color:black;
+
+
+}
+.mdl-navigation__link.secondcolor1.active{
+  color:white;
+  background-color: #2a2e63;
+}
+.mdl-layout__header.secodhedaer1{
+  background-color: white;
+  
+}
+.mdl-card{
+  width:100%;
+}
+.textcurrent{
+ /* margin: 0 0 0px */
+ color:#95989a;
+ font-size: 12px;
+
+    margin: 0 0 5px;
+}
+body{
+  
+}
+ul{
+  list-style: none;
+}
+.ploting2{
+  padding: 0px;
+  width:100%;
+
+
+}
+.ploting1{
+  padding: 0px;
+  width:100%;
+}
+.ploting{
+  padding: 0px;
+  width:100%;
+}
+.mdl-layout__tab{  text-transform:none; }
+</style>
+<body style="font-family: Helvetica Neue">
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+mdl-layout--fixed-tabs" style="margin-bottom:10%;">
+    <header class="mdl-layout__header" style="min-height:0;background-color:#2a2e63;">
+        
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 100%;width: 60%; background-color:#2a2e63;">
+            <a class="mdl-layout__tab">Genospace</a>
+          <a href="#scroll-tab-1" class="mdl-layout__tab">Curate</a>
+          <a href="#scroll-tab-2" class="mdl-layout__tab">Clinical Trials</a>
+          <a href="#scroll-tab-3" class="mdl-layout__tab">Research</a>
+          <a href="#scroll-tab-4" class="mdl-layout__tab is-active">Patients</a>
+
+        </div>
+      </header>
+
+          <header class="mdl-layout__header secodhedaer">
+           
+              <!-- Title -->
+              
+              <!-- Add spacer, to align navigation to the right -->
+
+              <!-- Navigation -->
+              <nav class="mdl-navigation" style="padding-top:5px;padding-left:15px;" >
+                <a class="mdl-navigation__link secondcolor" href=""><strong>Patients</strong></a>
+                <a class="mdl-navigation__link secondcolor" href=""><strong>></strong></a>
+                <a class="mdl-navigation__link secondcolor" href=""><strong>Adam Everyman</strong></a>
+              </nav>
+      
+          </header>
+
+          <main class="mdl-layout__content">
+
+              <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col"></div>
+
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" style=" margin: 0 auto;">
+    
+                      <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="min-height: 50px; width:100%;  margin: 0 auto;">
+                          <div style="width: 100%;">
+                            <ul style="text-align:center;padding:0;"><li style="display:inline;padding:0 10px;">Medical History</li> <li style="display:inline;padding:0 10px;">Clinical Trials</li> <li style="display:inline;padding:0 10px;">Reposts</li></ul>
+                            </div>
+                  </div>
+                  </div>
+
+              </div>
+
+            <div class="mdl-grid ">
+ 
+ 
+     <div class="mdl-cell mdl-cell--3-col" style=" margin: 0 auto;padding-top: 64px;" >
+        
+    <div class="mdl-card mdl-shadow--3dp" style="margin: 0 auto;">
+      <div class="mdl-card__title mdl-card--border" style="text-align:center;">
+        <h6 style="margin: 0 0 0px;font-weight:bold;">Adam EveryMan</h6></div>
+      <div class="mdl-card__text">
+        <ul>
+            <li><strong>MRN:</strong> 9088</li>
+          <li><strong>Date of Birth:</strong> 11/11/1979</li>
+          <li><strong>Treatment:</strong> Male</li>
+          <li><strong>Next Appointment:</strong> 11/11/2018</li>
+          <li><strong>Doctor's Name:</strong> John Dow</li>
+          </ul>
+      </div>
+     
+    </div>
+    <br>
+    <div class="mdl-card mdl-shadow--3dp" style="margin: 0 auto;">
+        <div class="mdl-card__title mdl-card--border">
+          <h6 style="margin: 0 0 0px; font-weight:bold; text-align:center;">Vital Signs &amp; Health Info</h6></div>
+        <div class="mdl-card__text">
+          <ul>
+            
+            <li><strong>Body Weight:</strong></li>
+            <li><strong>Blood Pressure:</strong></li>
+            <li><strong>Pulse Rate:</strong></li>
+            <li><strong>Allergies:</strong></li>
+            <li><strong>Chronic Disease:</strong></li>
+            </ul>
+        </div>
+        
+      </div>
+    
+  </div>
+  
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" style="margin: 0 auto;">
+
+    <h6 style="color:#817f7f;">Current</h6>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="width:100%;">
+      
+      <div class="mdl-card__supporting-text" style="padding-top:0%;">
+          <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <!-- Disease -->
+ <h6 style="margin:0%; font-family:Helvetica Neue;"> <img src="cancer.png" alt="diseaase" style="width:10%;"/> Disease</h6>
+<p class="textcurrent">Non-small cell lung</p>
+<p class="textcurrent">Stage I</p>
+<p class="textcurrent">Grade I</p>
+
+        </div>
+            <div class="mdl-cell mdl-cell--6-col">
+ <!-- Current Medication-->
+ <h6 style="margin:0%;font-family:Helvetica Neue;"> <img src="pills.png" alt="diseaase" style="width:10%;"/> Current Medication</h6>
+ <p class="textcurrent">Marinol 2.5 mg capsule: January 4, 2016</p>
+<p class="textcurrent">Ondansetron: January 4, 2016</p>
+<p class="textcurrent">Lisinopril: January 2, 2016</p>
+            </div>
+            
+     
+              </div>
+              <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col"> 
+                      <h6 style="margin:0%;font-family:Helvetica Neue;"> <img src="blood-sample.png" alt="diseaase" style="width:10%;" /> Lab Results</h6>
+                    <!-- Lab Results-->
+                    <p class="textcurrent">Ondansetron: January 4, 2016</p>
+<p class="textcurrent">Lisinopril: January 2, 2016</p>
+                  </div>
+                      
+                      
+               
+                        </div>
+            </div>
+    
+    </div>
+
+    <br>
+    <h6 style="color:#817f7f;">History</h6>
+    <div class="mdl-card mdl-shadow--3dp" style="width:100%;">
+        <div class="mdl-card__title mdl-card--border" style="background-color:#f9f9f9;padding-top:0;padding-bottom:0;">
+           
+          <button id="demo-menu-lower-left"
+            class="mdl-button mdl-js-button" style="min-width: 90px;">
+      <i class="fa fa-caret-down"> Disease</i>
+    </button>
+    
+    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+        for="demo-menu-lower-left">
+      <li class="mdl-menu__item"> <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+          <input type = "checkbox" id = "checkbox1" 
+             class = "mdl-checkbox__input" checked>
+          <span class = "mdl-checkbox__label">Stage I</span>
+       </label></li>
+      <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+          <input type = "checkbox" id = "checkbox2" 
+             class = "mdl-checkbox__input" checked>
+          <span class = "mdl-checkbox__label">Stage II</span>
+       </label></li>
+      <li class="mdl-menu__item"><label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+          <input type = "checkbox" id = "checkbox3" 
+             class = "mdl-checkbox__input" checked>
+          <span class = "mdl-checkbox__label">Stage I</span>
+       </label></li>
+
+    </ul> 
+
+
+
+    <button id="demo-menu-lower-left1"
+    class="mdl-button mdl-js-button" style="min-width: 90px;">
+    <i class="fa fa-caret-down"> Lab</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-left1">
+    <li class="mdl-menu__item">
+        <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+            <input type = "checkbox" id = "checkbox4" 
+               class = "mdl-checkbox__input" checked>
+            <span class = "mdl-checkbox__label"> Hemoglobin</span>
+         </label>
+     </li>
+    <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">
+        <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+            <input type = "checkbox" id = "checkbox5" 
+               class = "mdl-checkbox__input" checked>
+            <span class = "mdl-checkbox__label">  Absolute Neutrophil</span>
+         </label>
+     </li>
+    <li  class="mdl-menu__item">
+        <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+            <input type = "checkbox" id = "checkbox6" 
+               class = "mdl-checkbox__input" checked>
+            <span class = "mdl-checkbox__label"> Bilirubin</span>
+         </label>
+      </li>
+</ul>
+   
+
+          <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+                <input type = "checkbox" id = "checkbox7" 
+                   class = "mdl-checkbox__input" checked>
+                <span class = "mdl-checkbox__label">Medications</span>
+             </label>
+            
+            </div>
+      <div class="mdl-card__supporting-text mdl-card--border ploting">
+        <!--Grid Stages -->  
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col"> 
+              <h6 class="diseaseInfo">Stage I</h6>
+              <ul class="medicine">
+                <li> <img src="pills.png" alt="diseaase" style="width:10%;"/>Marinol 2.5 mg capsule</li>
+            <li><img src="pills.png" alt="diseaase" style="width:10%;"/>Ondansetron</li>
+            </ul>
+
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+                <h6 class="diseaseInfo">Stage II</h6>
+              <ul class="medicine">
+                <li><img src="pills.png" alt="diseaase" style="width:10%;"/>Marinol 2.5 mg capsule</li>
+              <li><img src="pills.png" alt="diseaase" style="width:10%;"/>Ondansetron</li>
+              </ul></div>
+            <div class="mdl-cell mdl-cell--4-col">
+                <h6 class="diseaseInfo">Stage III</h6>
+              <ul class="medicine">
+                <li><img src="pills.png" alt="diseaase" style="width:10%;"/>Marinol 2.5 mg capsule</li>
+              <li><img src="pills.png" alt="diseaase" style="width:10%;"/>Ondansetron</li>
+              </ul> </div>
+          </div>
+          
+        <script>
+              var data = [
+              {key: "Jelly", value: 5, date: "2014/01/23" },
+                {key: "Jelly", value: 3.5, date: "2014/01/24" },
+                {key: "Jelly", value: 4, date: "2014/01/25" },
+                {key: "Jelly", value: 5, date: "2014/01/26" },
+                
+                {key: "Jelly", value: 3.5, date: "2014/01/27" },
+                {key: "Jelly", value: 3, date: "2014/01/28" },
+                {key: "Jelly", value: 5, date: "2014/01/29" },
+                
+                {key: "Jelly", value: 4, date: "2014/01/30" },
+                {key: "Jelly", value: 3, date: "2014/01/31" }
+              ];
+              var w = 500;
+              var h = 100;
+              var margin = {
+                top: 58,
+                bottom: 100,
+                left: 20,
+                right: 20
+              };
+              var width = w - margin.left - margin.right;
+              var height = h - margin.top - margin.bottom;
+              
+              var svg = d3.select(".ploting").append("svg")
+                    .attr("id", "chart")
+                    .attr("width", "100%")
+                    .attr("height", h);
+              var chart = svg.append("g")
+                    .classed("display", true)
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+              var dateParser = d3.time.format("%Y/%m/%d").parse;
+              var x = d3.time.scale()
+                  .domain(d3.extent(data, function(d){
+                    var date = dateParser(d.date);
+                    return date;
+                  }))
+                  .range([0,width]);
+              var y = d3.scale.linear()
+                  .domain([0, d3.max(data, function(d){
+                    return d.value;
+                  })])
+                  .range([height,0]);
+              var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient("bottom")
+                    .ticks(d3.time.days, 7)
+                    .tickFormat(d3.time.format("%m/%d"));
+              var yAxis = d3.svg.axis()
+                    .scale(y)
+                    .orient("left")
+                    .ticks(5);
+              var line = d3.svg.line()
+                    .x(function(d){
+                      var date = dateParser(d.date);
+                      return x(date);
+                    })
+                    .y(function(d){
+                      return y(d.value);
+                    });
+              var area = d3.svg.area()
+                    .x(function(d){
+                      var date = dateParser(d.date);
+                      return x(date);
+                    })
+                    .y0(height)
+                    .y1(function(d){
+                      return y(d.value);
+                    })
+              function plot(params){
+                this.append("g")
+                  .classed("x axis", true)
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(params.axis.x);
+                this.append("g")
+                 // .classed("y axis", true)
+                  //.attr("transform", "translate(0,0)")
+                 // .call(params.axis.y);
+                //enter()
+                this.selectAll(".area")
+                  .data([params.data])
+                  .enter()
+                    .append("path")
+                    .classed("area", true);
+                this.selectAll(".trendline")
+                  .data([params.data])
+                  .enter()
+                    .append("path")
+                    .classed("trendline", true);
+                this.selectAll(".point")
+                  .data(params.data)
+                  .enter()
+                    .append("circle")
+                    .classed("point", true)
+                    .attr("r", 6);
+                //update
+                this.selectAll(".area")
+                  .attr("d", function(d){
+                    return area(d);
+                  })
+                this.selectAll(".trendline")
+                  .attr("d", function(d){
+                    return line(d);
+                  })
+                this.selectAll(".point")
+                  .attr("cx", function(d){
+                    var date = dateParser(d.date);
+                    return x(date);
+                  })
+                  .attr("cy", function(d){
+                    return y(d.value);
+                  })
+                //exit()
+                this.selectAll(".area")
+                  .data([params.data])
+                  .exit()
+                  .remove();
+                this.selectAll(".trendline")
+                  .data([params.data])
+                  .exit()
+                  .remove();
+                this.selectAll(".point")
+                  .data(params.data)
+                  .exit()
+                  .remove();
+              }
+              plot.call(chart, {
+                data: data,
+                axis: {
+                  x: xAxis,
+                  y: yAxis
+                }
+              });
+              </script>
+              
+      </div>
+      
+
+      <div class="mdl-card__supporting-text mdl-card--border ploting1">
+          <script>
+              var data = [
+              {key: "Jelly", value: 5, date: "2014/01/23" },
+                {key: "Jelly", value: 3.5, date: "2014/01/24" },
+                {key: "Jelly", value: 4, date: "2014/01/25" },
+                {key: "Jelly", value: 5, date: "2014/01/26" },
+                {key: "Jelly", value: 3.5, date: "2014/01/27" },
+                {key: "Jelly", value: 3, date: "2014/01/28" },
+                {key: "Jelly", value: 5, date: "2014/01/29" },
+                {key: "Jelly", value: 4, date: "2014/01/30" },
+                {key: "Jelly", value: 3, date: "2014/01/31" }
+              ];
+              var w = 500;
+              var h = 100;
+              var margin = {
+                top: 58,
+                bottom: 100,
+                left: 20,
+                right: 20
+              };
+              var width = w - margin.left - margin.right;
+              var height = h - margin.top - margin.bottom;
+              
+              var svg = d3.select(".ploting1").append("svg")
+                    .attr("id", "chart")
+                    .attr("width", "100%")
+                    .attr("height", h);
+              var chart = svg.append("g")
+                    .classed("display", true)
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+              var dateParser = d3.time.format("%Y/%m/%d").parse;
+              var x = d3.time.scale()
+                  .domain(d3.extent(data, function(d){
+                    var date = dateParser(d.date);
+                    return date;
+                  }))
+                  .range([0,width]);
+              var y = d3.scale.linear()
+                  .domain([0, d3.max(data, function(d){
+                    return d.value;
+                  })])
+                  .range([height,0]);
+              var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient("bottom")
+                    .ticks(d3.time.days, 7)
+                    .tickFormat(d3.time.format("%m/%d"));
+              var yAxis = d3.svg.axis()
+                    .scale(y)
+                    .orient("left")
+                    .ticks(5);
+              var line = d3.svg.line()
+                    .x(function(d){
+                      var date = dateParser(d.date);
+                      return x(date);
+                    })
+                    .y(function(d){
+                      return y(d.value);
+                    });
+              var area = d3.svg.area()
+                    .x(function(d){
+                      var date = dateParser(d.date);
+                      return x(date);
+                    })
+                    .y0(height)
+                    .y1(function(d){
+                      return y(d.value);
+                    })
+              function plot(params){
+                this.append("g")
+                  .classed("x axis", true)
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(params.axis.x);
+                this.append("g")
+                //  .classed("y axis", true)
+                 // .attr("transform", "translate(0,0)")
+                 // .call(params.axis.y);
+                //enter()
+                this.selectAll(".area")
+                  .data([params.data])
+                  .enter()
+                    .append("path")
+                    .classed("area", true);
+                this.selectAll(".trendline")
+                  .data([params.data])
+                  .enter()
+                    .append("path")
+                    .classed("trendline", true);
+                this.selectAll(".point")
+                  .data(params.data)
+                  .enter()
+                    .append("circle")
+                    .classed("point", true)
+                    .attr("r", 6);
+                //update
+                this.selectAll(".area")
+                  .attr("d", function(d){
+                    return area(d);
+                  })
+                this.selectAll(".trendline")
+                  .attr("d", function(d){
+                    return line(d);
+                  })
+                this.selectAll(".point")
+                  .attr("cx", function(d){
+                    var date = dateParser(d.date);
+                    return x(date);
+                  })
+                  .attr("cy", function(d){
+                    return y(d.value);
+                  })
+                //exit()
+                this.selectAll(".area")
+                  .data([params.data])
+                  .exit()
+                  .remove();
+                this.selectAll(".trendline")
+                  .data([params.data])
+                  .exit()
+                  .remove();
+                this.selectAll(".point")
+                  .data(params.data)
+                  .exit()
+                  .remove();
+              }
+              plot.call(chart, {
+                data: data,
+                axis: {
+                  x: xAxis,
+                  y: yAxis
+                }
+              });
+              </script>
+              
+      </div>
+      <div class="mdl-card__supporting-text mdl-card--border ploting2">
+          <script>
+              var data = [
+                {key: "Jelly", value: 5, date: "2014/01/23" },
+                {key: "Jelly", value: 3.5, date: "2014/01/24" },
+                {key: "Jelly", value: 4, date: "2014/01/25" },
+                {key: "Jelly", value: 5, date: "2014/01/26" },
+                {key: "Jelly", value: 3.5, date: "2014/01/27" },
+                {key: "Jelly", value: 3, date: "2014/01/28" },
+                {key: "Jelly", value: 5, date: "2014/01/29" },
+                {key: "Jelly", value: 4, date: "2014/01/30" },
+                {key: "Jelly", value: 3, date: "2014/01/31" },
+                {key: "Jelly", value: 4, date: "2014/01/30" },
+                {key: "Jelly", value: 3, date: "2014/01/31" },
+                {key: "Jelly", value: 4, date: "2014/01/30" },
+                {key: "Jelly", value: 3, date: "2014/01/31" }
+              ];
+
+         
+             var w=500; 
+              var h = 100;
+              var margin = {
+                top: 58,
+                bottom: 100,
+                left: 20,
+                right: 20
+              };
+              var width = w - margin.left - margin.right;
+              var height = h - margin.top - margin.bottom;
+              
+              var svg = d3.select(".ploting2").append("svg")
+                    .attr("id", "chart")
+                    .attr("width", "100%")
+                    .attr("height", h);
+              var chart = svg.append("g")
+                    .classed("display", true)
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+              var dateParser = d3.time.format("%Y/%m/%d").parse;
+              var x = d3.time.scale()
+                  .domain(d3.extent(data, function(d){
+                    var date = dateParser(d.date);
+                    return date;
+                  }))
+                  .range([0,width]);
+              var y = d3.scale.linear()
+                  .domain([0, d3.max(data, function(d){
+                    return d.value;
+                  })])
+                  .range([height,0]);
+              var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient("bottom")
+                    .ticks(d3.time.days, 7)
+                    .tickFormat(d3.time.format("%m/%d"));
+              var yAxis = d3.svg.axis()
+                    .scale(y)
+                    .orient("left")
+                    .ticks(5);
+              var line = d3.svg.line()
+                    .x(function(d){
+                      var date = dateParser(d.date);
+                      return x(date);
+                    })
+                    .y(function(d){
+                      return y(d.value);
+                    });
+              var area = d3.svg.area()
+                    .x(function(d){
+                      var date = dateParser(d.date);
+                      return x(date);
+                    })
+                    .y0(height)
+                    .y1(function(d){
+                      return y(d.value);
+                    })
+              function plot(params){
+                this.append("g")
+                  .classed("x axis", true)
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(params.axis.x);
+                this.append("g")
+                 // .classed("y axis", true)
+                  //.attr("transform", "translate(0,0)")
+                  //.call(params.axis.y);
+                //enter()
+                this.selectAll(".area")
+                  .data([params.data])
+                  .enter()
+                    .append("path")
+                    .classed("area", true);
+                this.selectAll(".trendline")
+                  .data([params.data])
+                  .enter()
+                    .append("path")
+                    .classed("trendline", true);
+                this.selectAll(".point")
+                  .data(params.data)
+                  .enter()
+                    .append("circle")
+                    .classed("point", true)
+                    .attr("r", 6);
+                //update
+                this.selectAll(".area")
+                  .attr("d", function(d){
+                    return area(d);
+                  })
+                this.selectAll(".trendline")
+                  .attr("d", function(d){
+                    return line(d);
+                  })
+                this.selectAll(".point")
+                  .attr("cx", function(d){
+                    var date = dateParser(d.date);
+                    return x(date);
+                  })
+                  .attr("cy", function(d){
+                    return y(d.value);
+                  })
+                //exit()
+                this.selectAll(".area")
+                  .data([params.data])
+                  .exit()
+                  .remove();
+                this.selectAll(".trendline")
+                  .data([params.data])
+                  .exit()
+                  .remove();
+                this.selectAll(".point")
+                  .data(params.data)
+                  .exit()
+                  .remove();
+              }
+              plot.call(chart, {
+                data: data,
+                axis: {
+                  x: xAxis,
+                  y: yAxis
+                }
+              });
+
+
+
+              
+              </script>
+           
+      </div>
+
+ 
+    </div>
+
+
+
+
+    
+  </div>
+  
+   
+          
+
+          </main>
+
+
+        </div>
+
+
+</body>
+
+</html>

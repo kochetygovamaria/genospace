@@ -1,0 +1,69 @@
+
+#chart{
+	background-color: white;
+	
+}
+.bar{
+	fill: purple;
+	shape-rendering: crispEdges;
+}
+.bar-label{
+	fill: black;
+	text-anchor: middle;
+	font-size: 18px;
+}
+.axis path,
+.axis line{
+	fill: none;
+	
+	shape-rendering: crispEdges;
+}
+.gridline path,
+.gridline line{
+	fill: none;
+	stroke: #ccc;
+	shape-rendering: crispEdges;
+}
+.mdl-cell.mdl-cell--4-col{
+text-align: center;
+}
+.diseaseInfo{
+	font-style: italic;
+}
+.trendline{
+	fill: none;
+	
+	stroke-width: 1px;
+}
+.medicine{
+	text-align: left;
+	padding: 0;
+}
+.medicine li{
+	font-size: 10px;
+}
+.area{
+
+	fill: white;
+	
+	stroke-width: 1px;
+}
+.ploting .trendline{
+	stroke:#0882D3;
+}
+.ploting circle.point{
+	fill:#0882D3;
+}
+.ploting1 .trendline{
+	stroke:#045D0E;
+}
+.ploting1 circle.point{
+	fill:#045D0E;
+}
+
+.ploting2 .trendline{
+	stroke:#916D0A;
+}
+.ploting2 circle.point{
+	fill:#916D0A;
+}
