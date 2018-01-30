@@ -2,6 +2,10 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <title>Genospace</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Material Design Lite -->
   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
@@ -115,13 +119,11 @@ width: 110%;
 }
 </style>
 <script>
-  $(window).load(function() {
-		// Animate loader off screen
-    function show_popup(){
+
+  $(window).on('load', function(){ function show_popup(){
 		$(".se-pre-con").fadeOut("slow");
     };
-    window.setTimeout( show_popup, 2000 );
-	});
+    window.setTimeout( show_popup, 2000 );});
 </script>
 <body style="font-family: Helvetica Neue">
     <div class="se-pre-con"></div>
