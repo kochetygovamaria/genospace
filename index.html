@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	<script  type="text/javascript" src="d3.min.js"></script>
 </head>
 <style>
@@ -74,8 +76,11 @@ ul{
 
 
 }
+.mdl-checkbox__label {
+  font-size: 14px;
+}
 .mdl-menu__item.newsize{
-line-height: 10px; }
+line-height: 15px; }
 .ploting1{
   padding: 0px;
   width:100%;
@@ -85,23 +90,61 @@ line-height: 10px; }
   width:100%;
 }
 .mdl-layout__tab{  text-transform:none; }
-</style>
-<body style="font-family: Helvetica Neue">
+.mdl-checkbox__tick-outline{
+width: 110%;
+}
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(Preloader_2.gif) center no-repeat #fff;
+}
+@media only screen and (max-width: 600px) { 
+  .mdl-layout__tab-bar.mdl-js-ripple-effect.devices{
+    width:100%;
 
+  }
+  .logo{
+    visibility: hidden;
+  }
+}
+</style>
+<script>
+  $(window).load(function() {
+		// Animate loader off screen
+    function show_popup(){
+		$(".se-pre-con").fadeOut("slow");
+    };
+    window.setTimeout( show_popup, 2000 );
+	});
+</script>
+<body style="font-family: Helvetica Neue">
+    <div class="se-pre-con"></div>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
 mdl-layout--fixed-tabs" style="margin-bottom:10%;">
+
     <header class="mdl-layout__header" style="min-height:0;background-color:#2a2e63;">
         
         <!-- Tabs -->
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 100%;width: 60%; background-color:#2a2e63;">
-            <a class="mdl-layout__tab">Genospace</a>
-          <a href="#scroll-tab-1" class="mdl-layout__tab">Curate</a>
-          <a href="#scroll-tab-2" class="mdl-layout__tab">Clinical Trials</a>
-          <a href="#scroll-tab-3" class="mdl-layout__tab">Research</a>
-          <a href="#scroll-tab-4" class="mdl-layout__tab is-active">Patients</a>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect devices" style="height: 100%; background-color:#2a2e63;">
+         
+    
+         
+          <img  class="logo"  src="download.png" style="width:15%;height:15%; padding-right:15px;  visibility:visible;" alt="logo"/>
+          <a href="#scroll-tab-1" style="padding-right:15px; color:#efeeee; opacity:0.5;     text-decoration: none; padding-top:15px;padding-bottom:15px;" >Curate</a>
+          <a href="#scroll-tab-2" style="padding-right:15px; color:#efeeee;  opacity:0.5; padding-top:15px; padding-bottom:15px;    text-decoration: none;">Clinical Trials</a>
+          <a href="#scroll-tab-3" style="padding-right:15px; color:#efeeee; opacity:0.5; padding-top:15px;  padding-bottom:15px;  text-decoration: none;"  >Research</a>
+          <a href="#scroll-tab-4" style="color:#efeeee; padding-top:15px;padding-bottom:15px;" >Patients</a>
+
 
         </div>
       </header>
+    
 
           <header class="mdl-layout__header secodhedaer">
            
@@ -224,7 +267,7 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
            
           <button id="demo-menu-lower-left"
             class="mdl-button mdl-js-button" style="min-width: 90px;">
-      <i class="fa fa-caret-down"> Disease</i>
+      <i class="fa fa-caret-down"> <span style="font-family:Helvetica Neue;">Disease</span></i>
     </button>
     
     <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
@@ -232,14 +275,14 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
       <li class="mdl-menu__item newsize"> <label class = "mdl-checkbox mdl-js-checkbox " for = "checkbox1">
           <input type = "checkbox" id = "checkbox1" 
              class = "mdl-checkbox__input " checked>
-          Stage I
+        <span> Stage I</span> 
        </label></li>
-      <li class="mdl-menu__item mdl-menu__item--full-bleed-divider newsize"><label class = "mdl-checkbox mdl-js-checkbox " for = "checkbox1">
+      <li class="mdl-menu__item mdl-menu__item--full-bleed-divider newsize"><label class = "mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect " for = "checkbox2">
           <input type = "checkbox" id = "checkbox2" 
              class = "mdl-checkbox__input" checked>
           <span class = "mdl-checkbox__label">Stage II</span>
        </label></li>
-      <li class="mdl-menu__item newsize"><label class = "mdl-checkbox mdl-js-checkbox " for = "checkbox1">
+      <li class="mdl-menu__item newsize"><label class = "mdl-checkbox mdl-js-checkbox " for = "checkbox3">
           <input type = "checkbox" id = "checkbox3" 
              class = "mdl-checkbox__input" checked>
           <span class = "mdl-checkbox__label">Stage III</span>
@@ -251,27 +294,28 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
 
     <button id="demo-menu-lower-left1"
     class="mdl-button mdl-js-button" style="min-width: 90px;">
-    <i class="fa fa-caret-down"> Lab</i>
+    <i class="fa fa-caret-down"> <span style="font-family:Helvetica Neue;">Lab</span></i>
 </button>
 
 <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
     for="demo-menu-lower-left1">
-    <li class="mdl-menu__item">
-        <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+
+    <li class="mdl-menu__item newsize">
+        <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox4">
             <input type = "checkbox" id = "checkbox4" 
                class = "mdl-checkbox__input" checked>
             <span class = "mdl-checkbox__label"> Hemoglobin</span>
          </label>
      </li>
-    <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">
-        <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+    <li class="mdl-menu__item mdl-menu__item--full-bleed-divider newsize">
+        <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox5">
             <input type = "checkbox" id = "checkbox5" 
                class = "mdl-checkbox__input" checked>
             <span class = "mdl-checkbox__label">  Absolute Neutrophil</span>
          </label>
      </li>
-    <li  class="mdl-menu__item">
-        <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+    <li  class="mdl-menu__item newsize">
+        <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox6">
             <input type = "checkbox" id = "checkbox6" 
                class = "mdl-checkbox__input" checked>
             <span class = "mdl-checkbox__label"> Bilirubin</span>
@@ -280,17 +324,23 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
 </ul>
    
 
-          <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+          <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox7">
                 <input type = "checkbox" id = "checkbox7" 
                    class = "mdl-checkbox__input" checked>
-                <span class = "mdl-checkbox__label">Medications</span>
+                <span class = "mdl-checkbox__label" ></span><span style="font-family:Helvetica Neue;">Medication</span>
              </label>
             
             </div>
       <div class="mdl-card__supporting-text mdl-card--border ploting">
         <!--Grid Stages -->  
-        <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--4-col"> 
+       
+       
+       
+       
+       
+        <div>
+        <div class="mdl-grid" style="background-image:url('background.svg'); background-size: cover;">
+            <div class="mdl-cell mdl-cell--4-col" > 
               <h6 class="diseaseInfo">Stage I</h6>
               <ul class="medicine">
                 <li> <img src="pills.png" alt="diseaase" style="width:10%;"/>Marinol 2.5 mg capsule</li>
@@ -448,7 +498,7 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
               });
               </script>
               
-      </div>
+      
       
 
       <div class="mdl-card__supporting-text mdl-card--border ploting1">
@@ -477,6 +527,7 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
               
               var svg = d3.select(".ploting1").append("svg")
                     .attr("id", "chart")
+                    
                     .attr("width", "100%")
                     .attr("height", h);
               var chart = svg.append("g")
@@ -587,7 +638,7 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
               </script>
               
       </div>
-      <div class="mdl-card__supporting-text mdl-card--border ploting2">
+      <div class="mdl-card__supporting-text mdl-card--border ploting2" >
           <script>
               var data = [
                 {key: "Jelly", value: 5, date: "2014/01/23" },
@@ -734,7 +785,7 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
            
       </div>
 
- 
+    </div>
     </div>
 
 

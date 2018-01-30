@@ -1,6 +1,7 @@
 
 #chart{
-	background-color: white;
+	background-image:url('background.svg');
+	 background-size: cover;
 	
 }
 .bar{
@@ -44,7 +45,7 @@ text-align: center;
 }
 .area{
 
-	fill: white;
+	fill: transparent;
 	
 	stroke-width: 1px;
 }
