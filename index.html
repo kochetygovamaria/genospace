@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8">
     <title>Genospace</title>
-   
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Material Design Lite -->
   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
   <!-- Material Design icon font -->
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	<script  type="text/javascript" src="d3.min.js"></script>
 </head>
 <style>
@@ -108,7 +108,7 @@ width: 110%;
 	z-index: 9999;
 	background: url(Preloader_2.gif) center no-repeat #fff;
 }
-@media only screen and (max-width: 00px) { 
+@media only screen and (max-width: 400px) { 
   .mdl-layout__tab-bar.mdl-js-ripple-effect.devices{
     width:100%;
 
@@ -158,9 +158,9 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
 
               <!-- Navigation -->
               <nav class="mdl-navigation" style="padding-top:5px;padding-left:15px;" >
-                <a class="mdl-navigation__link secondcolor" href=""><strong>Patients</strong></a>
-                <a class="mdl-navigation__link secondcolor" href=""><strong>></strong></a>
-                <a class="mdl-navigation__link secondcolor" href=""><strong>Adam Everyman</strong></a>
+                <a class="mdl-navigation__link secondcolor" href="#scroll-tab-1"><strong>Patients</strong></a>
+                <a class="mdl-navigation__link secondcolor" href="#scroll-tab-1"><strong>></strong></a>
+                <a class="mdl-navigation__link secondcolor" href="#scroll-tab-1"><strong>Adam Everyman</strong></a>
               </nav>
       
           </header>
@@ -343,7 +343,7 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
        
        
         <div>
-        <div class="mdl-grid" style="background-image:url('background.svg'); background-size: cover;">
+        <div class="mdl-grid" style="background-image:url('background.svg');background-size:100%;">
             <div class="mdl-cell mdl-cell--4-col" > 
               <h6 class="diseaseInfo">Stage I</h6>
               <ul class="medicine">
@@ -438,9 +438,9 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
                     })
               function plot(params){
                 this.append("g")
-                  .classed("x axis", true)
-                  .attr("transform", "translate(0," + height + ")")
-                  .call(params.axis.x);
+                 // .classed("x axis", true)
+                  //.attr("transform", "translate(0," + height + ")")
+                  //.call(params.axis.x);
                 this.append("g")
                  // .classed("y axis", true)
                   //.attr("transform", "translate(0,0)")
@@ -577,9 +577,9 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
                     })
               function plot(params){
                 this.append("g")
-                  .classed("x axis", true)
-                  .attr("transform", "translate(0," + height + ")")
-                  .call(params.axis.x);
+                //  .classed("x axis", true)
+                 // .attr("transform", "translate(0," + height + ")")
+                 // .call(params.axis.x);
                 this.append("g")
                 //  .classed("y axis", true)
                  // .attr("transform", "translate(0,0)")
@@ -719,9 +719,9 @@ mdl-layout--fixed-tabs" style="margin-bottom:10%;">
                     })
               function plot(params){
                 this.append("g")
-                  .classed("x axis", true)
-                  .attr("transform", "translate(0," + height + ")")
-                  .call(params.axis.x);
+                //  .classed("x axis", true)
+                //  .attr("transform", "translate(0," + height + ")")
+                //  .call(params.axis.x);
                 this.append("g")
                  // .classed("y axis", true)
                   //.attr("transform", "translate(0,0)")

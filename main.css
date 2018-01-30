@@ -19,6 +19,9 @@
 	
 	shape-rendering: crispEdges;
 }
+g.tick{
+	color: transparent;
+}
 .gridline path,
 .gridline line{
 	fill: none;
