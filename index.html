@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	<script  type="text/javascript" src="d3.min.js"></script>
 </head>
@@ -119,11 +119,13 @@ width: 110%;
 }
 </style>
 <script>
-
-  $(window).on('load', function(){ function show_popup(){
+  $(window).load(function() {
+		// Animate loader off screen
+    function show_popup(){
 		$(".se-pre-con").fadeOut("slow");
     };
-    window.setTimeout( show_popup, 2000 );});
+    window.setTimeout( show_popup, 2000 );
+	});
 </script>
 <body style="font-family: Helvetica Neue">
     <div class="se-pre-con"></div>
